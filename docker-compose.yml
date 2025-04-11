@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   servicio2:
-    build: .
+    build: flask-servicio2
     ports:
       - "5001:5001"
     environment:
