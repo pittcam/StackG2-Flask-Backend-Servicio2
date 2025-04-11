@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  servicio2:
+    build: .
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=development
