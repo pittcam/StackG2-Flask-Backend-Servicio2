@@ -27,3 +27,4 @@ def insert_favorite_movie(user_id, movie_id):
     finally:
         cur.close()
         conn.close()
+

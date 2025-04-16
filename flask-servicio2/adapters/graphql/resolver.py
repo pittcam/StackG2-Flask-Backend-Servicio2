@@ -18,3 +18,4 @@ def resolve_add_favorite_movie(_, info, user_id, movie_id):
         print("Error:", e)
         return {"success": False, "movie_id": movie_id}
 
+

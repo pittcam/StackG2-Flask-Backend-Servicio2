@@ -4,7 +4,7 @@ type Query {
 }
 
 type Mutation {
-  addFavoriteMovie(user_id: ID!, movie_id: Int!): AddFavoriteResponse
+  addFavoriteMovie(user_id: ID!, movie_id: ID!): AddFavoriteResponse
 }
 
 type Movie {
@@ -17,6 +17,6 @@ type Movie {
 
 type AddFavoriteResponse {
   success: Boolean!
-  movie_id: Int!
+  movie_id: ID!
 }
 """
