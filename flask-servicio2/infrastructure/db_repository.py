@@ -48,7 +48,7 @@ def insert_later_movie(user_id, movie_id):
 
   # depende de cómo conectes
 
-def get_favorite_movie(user_id):
+def get_favorite_movie_ids_by_user(user_id):
     conn = get_connection()
     cursor = conn.cursor()
     try:

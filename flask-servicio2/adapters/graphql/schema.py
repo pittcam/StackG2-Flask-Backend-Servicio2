@@ -1,7 +1,7 @@
 type_defs = """
 type Query {
   searchMovies(query: String!): [Movie!]!
-  getFavoriteMovie(user_id: ID!): [Movie!]!
+  getFavoriteMovies(user_id: ID!): [FavoriteResponse!]!
 }
 
 type Mutation {
@@ -25,5 +25,10 @@ type AddFavoriteResponse {
 type AddWatchLaterResponse { 
   success: Boolean!
   movie_id: ID!
+}
+
+type FavoriteResponse { 
+  id: ID!
+  poster: String!
 }
 """
