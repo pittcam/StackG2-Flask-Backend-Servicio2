@@ -34,7 +34,7 @@ def insert_later_movie(user_id, movie_id):
 
     try:
         cur.execute(
-            "INSERT INTO user_favorites (user_id, movie_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
+            "INSERT INTO user_watchlist (user_id, movie_id) VALUES (%s, %s) ON CONFLICT DO NOTHING",
             (user_id, movie_id),
         )
         conn.commit()

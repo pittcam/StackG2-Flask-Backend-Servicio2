@@ -21,7 +21,7 @@ def resolve_add_favorite_movie(_, info, user_id, movie_id):
 
 
 @mutation.field("addToWatchLater")
-def resolve_add_favorite_movie(_, info, user_id, movie_id):
+def resolve_add_watchlater_movie(_, info, user_id, movie_id):
     try:
         result = add_later_movie_use_case(user_id, movie_id)
         return {"success": result["success"], "movie_id": result["movie_id"]}
@@ -37,7 +37,7 @@ def resolve_get_favorite_movies(_, info, user_id):
         print("Error:", e)
         return []
 
-@query.field("getWatchLater")
+@query.field("getWatchLaterMovies")
 def resolve_get_later_movies(_, info, user_id):
     try:
         return get_later_movie_use_case(user_id)
