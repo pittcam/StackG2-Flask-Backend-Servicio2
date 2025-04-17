@@ -2,6 +2,7 @@ type_defs = """
 type Query {
   searchMovies(query: String!): [Movie!]!
   getFavoriteMovies(user_id: ID!): [FavoriteResponse!]!
+  getWatchLater(user_id: ID!): [FavoriteResponse!]!
 }
 
 type Mutation {

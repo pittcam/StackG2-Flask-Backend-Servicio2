@@ -58,3 +58,14 @@ def get_favorite_movie_ids_by_user(user_id):
     finally:
         cursor.close()
         conn.close()
+
+def get_watchlater_ids_by_user(user_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT movie_id FROM user_watchlist WHERE user_id = %s", (user_id,))
+        rows = cursor.fetchall()
+        return [row[0] for row in rows]
+    finally:
+        cursor.close()
+        conn.close()
