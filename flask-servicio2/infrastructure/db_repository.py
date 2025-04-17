@@ -59,6 +59,8 @@ def get_favorite_movie_ids_by_user(user_id):
         cursor.close()
         conn.close()
 
+
+
 def get_watchlater_ids_by_user(user_id):
     conn = get_connection()
     cursor = conn.cursor()

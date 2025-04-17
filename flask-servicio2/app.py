@@ -6,8 +6,12 @@ from adapters.graphql.resolver import query, mutation
 from flask_cors import CORS
 import os
 from dotenv import load_dotenv
+from database.init_db import init_db
 
+
+init_db()
 load_dotenv()
+
 
 app = Flask(__name__)
 CORS(app)
@@ -25,4 +29,4 @@ def graphql_server():
     return jsonify(result), 200 if success else 400
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(host="0.0.0.0",debug=True, port=5001)
