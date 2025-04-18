@@ -1,12 +1,11 @@
 from flask import Flask, request, jsonify
 from ariadne import graphql_sync, make_executable_schema
 from ariadne.explorer import ExplorerGraphiQL
-from adapters.graphql.schema import type_defs
-from adapters.graphql.resolver import query, mutation
+from adapters.In.schema import type_defs
+from adapters.In.resolver import query, mutation
 from flask_cors import CORS
-import os
 from dotenv import load_dotenv
-from database.init_db import init_db
+from adapters.out.database.init_db import init_db
 
 
 init_db()
