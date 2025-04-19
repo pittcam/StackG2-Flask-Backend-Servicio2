@@ -1,13 +1,12 @@
-# 🎬 MovieNest - Vue + Node + PostgreSQL
+# 🎬 MovieNest - Vue + Flask + PostgreSQL + GraphQL
 
 ¡Bienvenido a **MovieNest**!  
-Este proyecto es una aplicación completa para gestión de películas favoritas, listas personales y mucho más.
+Este proyecto es una aplicación web para la gestión de películas favoritas con listas.
 
 ## 🚀 Requisitos Previos
 
 - Docker y Docker Compose
-- PostgreSQL
-
+- Configuración ambiente de PostgreSQL Local
 ---
 
 ## ⚙️ Configuración Inicial
@@ -16,34 +15,19 @@ Antes de levantar el proyecto, es necesario realizar algunos ajustes en la confi
 
 ### 📄 1. Variables de Entorno
 
-Editá el archivo `.env` y el docker-compose de este contenedor con los siguientes datos:
+Editá el archivo `.env` y el docker-compose del contenedor del servicio 2 con los siguientes datos:
 
-```env
-# 🎬 MovieNest - Vue + Node + PostgreSQL
-
-¡Bienvenido a **MovieNest**!  
-Este proyecto es una aplicación completa para gestión de películas favoritas, listas personales y mucho más.
-
-## 🚀 Requisitos Previos
-
-- Node.js >= 16
-- Docker y Docker Compose
-- PostgreSQL
-
----
-
-## ⚙️ Configuración Inicial
-
-Antes de levantar el proyecto, es necesario realizar algunos ajustes en la configuración del entorno y base de datos:
-
-### 📄 1. Variables de Entorno
-
-Editá el archivo `.env` (crealo si no existe) en la raíz del backend con los siguientes datos:
-
-```env
+env
 - POSTGRES_DB=MovieNest
-- POSTGRES_USER=tu usuario #cambiar el usuario
+- POSTGRES_USER=tu usuario #cambiar el usuario o mantener
 - POSTGRES_PASSWORD=tu contraseña #cambiar la contraseña
 - POSTGRES_HOST=host.docker.internal
 - POSTGRES_PORT=5433
+
+### 📄 2. Para ejecutar el contenedor general
+
+Correr el siguiente comando en la raíz de la carpeta MovieNest-App:
+docker-compose up --build
+
+Si quiere detenerse se usa el comando: docker-compose down
 
