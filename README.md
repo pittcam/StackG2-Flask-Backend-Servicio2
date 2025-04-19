@@ -27,6 +27,8 @@ env
 
 ### 2. 📄 Crear base de datos MovieNest
 
+Es necesario crear la base de datos en el servidor activo con el nombre exacto de "MovieNest".
+
 ## Ejecutar el contenedor general
 
 ### 📄 1. A nivel de MovieNest-App
